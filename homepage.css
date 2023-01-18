@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.body{
+    overflow-x:hidden;
+}
+.full_section{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgb(140, 233, 126),gray);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.full_body{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+header{
+    padding: 40px 0px 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: space-between;
+
+}
+.logo .material-symbols-outlined{
+    width: 55px;
+    height: 55px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    cursor: pointer;
+    justify-content: center;
+    
+}
+.logo h1{
+    font-family: 'Explora', cursive;
+    margin-left: -13px;
+}
+.material-symbols-outlined {
+     font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 200,
+    'opsz' 48
+}
+nav .humb{
+    width: 35px;
+    height: 24px;
+    right: 3%;
+    top: 60px;
+    z-index: 5;
+    background: transparent;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+nav .humb span{
+    display: block;
+    background:rgb(230, 172, 64);
+    width: 100%;
+    height: 3px;
+    transition: .3s;
+    transition-property: transform , opacity;
+}
+nav .humb span:nth-child(2){
+    margin: 7px 0;
+}
+nav .nav_list{
+    list-style: none;
+}
+nav .nav_list li{
+    display: inline-block;
+}
+nav .nav_list li a{
+   text-decoration: none;
+    
+    display: inline-block;
+    margin-left: 45px;
+    font-size: 18px;
+    font-weight: 600;
+    color:black;
+}
+nav .nav_list li a:nth-child(4){
+    size: 50px;
+}
+nav .nav_list li:not(:first-child) a:hover{
+   
+    color: rgb(131, 45, 45);
+    transform: .3s;
+    text-decoration: underline;
+}
+nav .nav_list li.clubtn a{
+    display: inline-block;
+    background: transparent;
+    border: 2px solid black;
+    padding: 10px 5px;
+    border-radius: 25%;
+    line-height: 1.5;
+    color: darkgoldenrod;
+}
+nav .nav_list li.clubtn:hover a{
+    background-color: darkgoldenrod;
+    border: 2px solid transparent;
+    color:greenyellow;
+    transition: .4s;
+    transform: rotate(360deg);
+}
+nav .nav_list li.clubtn:active a{
+    background-color: goldenrod;
+}

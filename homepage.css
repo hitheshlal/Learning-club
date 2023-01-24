@@ -43,12 +43,15 @@ header{
     justify-content: center;
     color: rgb(171, 134, 205);
     background-color: transparent;
+    position: fixed;
     
 }
 .logo h1{
     font-family: 'Explora', cursive;
     margin-left: -13px;
+    margin-top: 52px;
     color: rgb(255, 255, 255);
+    position: fixed;
 }
 .material-symbols-outlined {
      font-variation-settings:
@@ -56,6 +59,9 @@ header{
     'wght' 300,
     'GRAD' 200,
     'opsz' 48
+}
+.material-symbols-outlined.md-36{
+    font-size: 32px;
 }
 nav{
     margin-left: 52%;
@@ -88,38 +94,27 @@ nav .nav_list{
 }
 nav .nav_list li{
     display: inline-block;
-    margin-left: 45px;
+    
 }
 nav .nav_list li a{
    text-decoration: none;
-    
+   margin-left: 45px;
     display: inline-block;
-    
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     color:white;
+    cursor: pointer;
 }
-nav .nav_list li.usericon img{
-    width: 37px;
-    height: 37px;
-    margin-top: 5px;
-    display: inline-block;
-    border-radius: 50%;
+nav .nav_list li span{
+    cursor: pointer;
+    
 }
-nav .nav_list li.usericon:hover img{
-    border: 2px rgb(0, 0, 0) outset;
-    transition: .3s;
-}
-
-
-
-nav .nav_list li:not(:first-child) a:hover{
+nav .nav_list li:not(:first-child) span a:hover{
    
     color: rgb(91, 101, 80);
     transform: .3s;
     text-decoration: underline;
 }
-
 nav .nav_list li.clubtn a{
     display: inline-block;
     background: transparent;
@@ -186,6 +181,42 @@ nav .nav_list li.clubtn:active a{
     background: #58629b;
     cursor: pointer;
     
+}
+.boxes{
+    width: 45%;
+    height: 467px;
+    margin:  auto;
+    
+    
+    
+}
+.box{
+    width: 40%;
+    height: 180px;
+    margin: auto;
+    float: left;
+    margin:20px 20px;
+
+}
+.caption{
+    height: 30%;    
+    
+        border-top-left-radius:  30px;
+        background:linear-gradient(rgba(32, 126, 66, 0.9), rgba(137, 137, 58, 0.9));
+        align-items: center;
+        padding: 18px;
+}
+.discripion{
+    height: 50%;
+    
+    border-top: none;
+    border-bottom-right-radius: 30px;
+    background:linear-gradient(rgba(21, 23, 30, 0.9), rgba(20, 25, 53, 0.9));
+
+}
+.discripion:hover ~ .caption{
+    border:2px outset;
+    border-color: linear-gradient(rgba(255,101,.5,0),rgba(255,101,.5,0));
 }
 
 

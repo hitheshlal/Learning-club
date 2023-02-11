@@ -10,6 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
 
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
     <style>
         *{
             padding: 0;
@@ -96,19 +98,40 @@ header{
             padding: 8px;
         }
         .btn{
-            width: 74px;
-            height: 45px;
-            border-radius: 50px;
-            color: black;
-            background-color: #71c562;
+            width: 104px;
+            height: 55px;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            background-color: #f4511e;
             margin-top: 20px;
+            padding: auto;
+            font-size: 15px;
         }
-        .btn:hover{
-            background-color:#0bd15f;
+        .btn span{
+            cursor: pointer;
+            display: inline-block;
+            transition: 0.5s;
+            position: relative;
+        }
+        .btn span::after{
+            content: '\00bb';
+            position: absolute;
+            top: 0px;
+            right: 20px;
+            transition: 0.5s;
+            opacity: 0;
+        }
+        .btn:hover span{
+            padding-right: 15px;
+        }
+        .btn:hover span::after{
+            opacity: 1;
+            right: 0;
         }
         .btn:active{
-            color: #71c562;
-            background-color: black;
+            color:black;
+            background-color:  #71c562;
         }
         .elements p{
             font-size: 12px;
@@ -134,17 +157,22 @@ header{
              <input type="text" name="fname" placeholder="First name*" class="ntext" required> 
              <input type="text" name="lname" placeholder="Second name*" class="ntext" required><br>
              <input type="text" name="username" placeholder="Username*" class="intext" required><br>
-             <input type="text" name="email" placeholder="Email" class="intext"><br>
+             <input type="text" name="email" id="email" placeholder="Email" class="intext"><br>
+             
              <input type="text" name="qualification" placeholder="Qualification" class="intext"><br>
-             <input type="password" name="pwd" placeholder="Password*" class="intext" required><br>
-             <input type="password" name="cpwd" placeholder="Confirm password*" class="intext" required><br><hr>
+             <input type="password" name="pwd" placeholder="Password*" class="intext" required autocomplete="on"><br>
+             <input type="password" name="cpwd" placeholder="Confirm password*" class="intext" required autocomplete="on"><br><hr>
              
              <p>By clicking Register, you agree on our <a href="#">privacy <br>policy  </a> and <a href="#" >cookie policy</a></p>
-             <button class="btn">Register</button>
+             <button class="btn" onclick="reg.java"><span>Register</span></button>  
             </form>
         </div>
     </div>
 </div>
 </section>
+
+<script>
+
+</script>
 </body>
 </html>
